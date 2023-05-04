@@ -15,13 +15,13 @@
 
 ```js
 document.body.onkeydown = (e) => {
-	keyboard.pressKey(e.keyCode);
-	text.value += String.fromCharCode(e.keyCode);
+  keyboard.pressKey(e.keyCode);
+  text.value += String.fromCharCode(e.keyCode);
 };
 document.body.onkeyup = (e) => {
-	keyboard.releaseKey(e.keyCode);
+  keyboard.releaseKey(e.keyCode);
 };
 keyboard.onkeydown = (code) => {
-	text.value += String.fromCharCode(code);
+  text.value += String.fromCharCode(code);
 };
 ```
