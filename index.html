@@ -4,9 +4,9 @@
 <script type="module">
 
 window.onload = function() {
-	const kbkeycode = [ 27, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, -1/*eject*/, 192, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 189, 187, 8/*46*/, 9, 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 219, 221, 220, 20, 65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 222, 13, 16, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, 16, -1/*x*/, 17, 18/*option*/, 91/*command*/, 32, 93/*command*/, -1/*option*/, 37, 38, 40, 39 ];
+	const kbkeycode = [27, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, -1/*eject*/, 192, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 189, 187, 8/*46*/, 9, 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 219, 221, 220, 20, 65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 222, 13, 16, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, 16, -1/*x*/, 17, 18/*option*/, 91/*command*/, 32, 93/*command*/, -1/*option*/, 37, 38, 40, 39];
 	
-	const keys = keyboard.getElementsByTagName("a");
+	const keys = keyboard.getElementsByTagName("p");
 //	keys[5].className += " keydown";
 	const s = [];
 	for (let i = 0; i < keys.length; i++) {
@@ -93,110 +93,107 @@ body {
 #text {
 	margin-top: 20px;
 	width: 80%;
-	x-opacity: 0;
-	x-visibility: hidden;
-	x-display: none;
 }
 </style>
 <body>
 
 <div id="main">
 	<div id="keyboard">
-    	<ul class="cf">
-        	<li><a href="#" class="key c27 fn esc"><span>esc</span></a></li>
-        	<li><a href="#" class="key c112 fn"><span>F1</span></a></li>
-        	<li><a href="#" class="key c113 fn"><span>F2</span></a></li>
-        	<li><a href="#" class="key c114 fn"><span>F3</span></a></li>
-        	<li><a href="#" class="key c115 fn"><span>F4</span></a></li>
-        	<li><a href="#" class="key c116 fn"><span>F5</span></a></li>
-        	<li><a href="#" class="key c117 fn"><span>F6</span></a></li>
-        	<li><a href="#" class="key c118 fn"><span>F7</span></a></li>
-        	<li><a href="#" class="key c119 fn"><span>F8</span></a></li>
-        	<li><a href="#" class="key c120 fn"><span>F9</span></a></li>
-        	<li><a href="#" class="key c121 fn"><span>F10</span></a></li>
-        	<li><a href="#" class="key c122 fn"><span>F11</span></a></li>
-        	<li><a href="#" class="key c123 fn"><span>F12</span></a></li>
-        	<li><a href="#" class="key fn eject"><span>Eject</span></a></li>
-        </ul>
-    	<ul class="cf" id="numbers">
-	    	<li><a href="#" class="key c192"><b>~</b><span>`</span></a></li>
-	    	<li><a href="#" class="key c49"><b>!</b><span>1</span></a></li>
-	    	<li><a href="#" class="key c50"><b>@</b><span>2</span></a></li>
-	    	<li><a href="#" class="key c51"><b>#</b><span>3</span></a></li>
-	    	<li><a href="#" class="key c52"><b>$</b><span>4</span></a></li>
-	    	<li><a href="#" class="key c53"><b>%</b><span>5</span></a></li>
-	    	<li><a href="#" class="key c54"><b>^</b><span>6</span></a></li>
-	    	<li><a href="#" class="key c55"><b>&amp;</b><span>7</span></a></li>
-	    	<li><a href="#" class="key c56"><b>*</b><span>8</span></a></li>
-	    	<li><a href="#" class="key c57"><b>(</b><span>9</span></a></li>
-	    	<li><a href="#" class="key c48"><b>)</b><span>0</span></a></li>
-	    	<li><a href="#" class="key c189 alt"><b>_</b><span>-</span></a></li>
-	    	<li><a href="#" class="key c187"><b>+</b><span>=</span></a></li>
-	    	<li><a href="#" class="key c46 delete"><span>Delete</span></a></li>
-        </ul>
-    	<ul class="cf" id="qwerty">
-	    	<li><a href="#" class="key c9 tab"><span>tab</span></a></li>
-	    	<li><a href="#" class="key c81"><span>q</span></a></li>
-	    	<li><a href="#" class="key c87"><span>w</span></a></li>
-	    	<li><a href="#" class="key c69"><span>e</span></a></li>
-	    	<li><a href="#" class="key c82"><span>r</span></a></li>
-	    	<li><a href="#" class="key c84"><span>t</span></a></li>
-	    	<li><a href="#" class="key c89"><span>y</span></a></li>
-	    	<li><a href="#" class="key c85"><span>u</span></a></li>
-	    	<li><a href="#" class="key c73"><span>i</span></a></li>
-	    	<li><a href="#" class="key c79"><span>o</span></a></li>
-	    	<li><a href="#" class="key c80"><span>p</span></a></li>
-	    	<li><a href="#" class="key c219 alt"><b>{</b><span>[</span></a></li>
-	    	<li><a href="#" class="key c221 alt"><b>}</b><span>]</span></a></li>
-	    	<li><a href="#" class="key c220 alt"><b>|</b><span>\</span></a></li>
-        </ul>
-        <ul class="cf" id="asdfg">
-	    	<li><a href="#" class="key c20 alt caps"><b></b><span>caps lock</span></a></li>
-	    	<li><a href="#" class="key c65"><span>a</span></a></li>
-	    	<li><a href="#" class="key c83"><span>s</span></a></li>
-	    	<li><a href="#" class="key c68"><span>d</span></a></li>
-	    	<li><a href="#" class="key c70"><span>f</span></a></li>
-	    	<li><a href="#" class="key c71"><span>g</span></a></li>
-	    	<li><a href="#" class="key c72"><span>h</span></a></li>
-	    	<li><a href="#" class="key c74"><span>j</span></a></li>
-	    	<li><a href="#" class="key c75"><span>k</span></a></li>
-	    	<li><a href="#" class="key c76"><span>l</span></a></li>
-	    	<li><a href="#" class="key c186 alt"><b>:</b><span>;</span></a></li>
-	    	<li><a href="#" class="key c222 alt"><b>"</b><span>'</span></a></li>
-	    	<li><a href="#" class="key c13 alt enter"><span>return</span></a></li>
-        </ul>
-        <ul class="cf" id="zxcvb">
-	    	<li><a href="#" class="key c16 shiftleft"><span>Shift</span></a></li>
-	    	<li><a href="#" class="key c90"><span>z</span></a></li>
-	    	<li><a href="#" class="key c88"><span>x</span></a></li>
-	    	<li><a href="#" class="key c67"><span>c</span></a></li>
-	    	<li><a href="#" class="key c86"><span>v</span></a></li>
-	    	<li><a href="#" class="key c66"><span>b</span></a></li>
-	    	<li><a href="#" class="key c78"><span>n</span></a></li>
-	    	<li><a href="#" class="key c77"><span>m</span></a></li>
-	    	<li><a href="#" class="key c188 alt"><b>&lt;</b><span>,</span></a></li>
-	    	<li><a href="#" class="key c190 alt"><b>&gt;</b><span>.</span></a></li>
-	    	<li><a href="#" class="key c191 alt"><b>?</b><span>/</span></a></li>
-	    	<li><a href="#" class="key c16 shiftright"><span>Shift</span></a></li>
-        </ul>
+		<ul class="cf">
+			<li><p class="key c27 fn esc"><span>esc</span></p></li>
+			<li><p class="key c112 fn"><span>F1</span></p></li>
+			<li><p class="key c113 fn"><span>F2</span></p></li>
+			<li><p class="key c114 fn"><span>F3</span></p></li>
+			<li><p class="key c115 fn"><span>F4</span></p></li>
+			<li><p class="key c116 fn"><span>F5</span></p></li>
+			<li><p class="key c117 fn"><span>F6</span></p></li>
+			<li><p class="key c118 fn"><span>F7</span></p></li>
+			<li><p class="key c119 fn"><span>F8</span></p></li>
+			<li><p class="key c120 fn"><span>F9</span></p></li>
+			<li><p class="key c121 fn"><span>F10</span></p></li>
+			<li><p class="key c122 fn"><span>F11</span></p></li>
+			<li><p class="key c123 fn"><span>F12</span></p></li>
+			<li><p class="key fn eject"><span>Eject</span></p></li>
+		</ul>
+		<ul class="cf" id="numbers">
+			<li><p class="key c192"><b>~</b><span>`</span></p></li>
+			<li><p class="key c49"><b>!</b><span>1</span></p></li>
+			<li><p class="key c50"><b>@</b><span>2</span></p></li>
+			<li><p class="key c51"><b>#</b><span>3</span></p></li>
+			<li><p class="key c52"><b>$</b><span>4</span></p></li>
+			<li><p class="key c53"><b>%</b><span>5</span></p></li>
+			<li><p class="key c54"><b>^</b><span>6</span></p></li>
+			<li><p class="key c55"><b>&amp;</b><span>7</span></p></li>
+			<li><p class="key c56"><b>*</b><span>8</span></p></li>
+			<li><p class="key c57"><b>(</b><span>9</span></p></li>
+			<li><p class="key c48"><b>)</b><span>0</span></p></li>
+			<li><p class="key c189 alt"><b>_</b><span>-</span></p></li>
+			<li><p class="key c187"><b>+</b><span>=</span></p></li>
+			<li><p class="key c46 delete"><span>Delete</span></p></li>
+		</ul>
+		<ul class="cf" id="qwerty">
+			<li><p class="key c9 tab"><span>tab</span></p></li>
+			<li><p class="key c81"><span>q</span></p></li>
+			<li><p class="key c87"><span>w</span></p></li>
+			<li><p class="key c69"><span>e</span></p></li>
+			<li><p class="key c82"><span>r</span></p></li>
+			<li><p class="key c84"><span>t</span></p></li>
+			<li><p class="key c89"><span>y</span></p></li>
+			<li><p class="key c85"><span>u</span></p></li>
+			<li><p class="key c73"><span>i</span></p></li>
+			<li><p class="key c79"><span>o</span></p></li>
+			<li><p class="key c80"><span>p</span></p></li>
+			<li><p class="key c219 alt"><b>{</b><span>[</span></p></li>
+			<li><p class="key c221 alt"><b>}</b><span>]</span></p></li>
+			<li><p class="key c220 alt"><b>|</b><span>\</span></p></li>
+		</ul>
+		<ul class="cf" id="asdfg">
+			<li><p class="key c20 alt caps"><b></b><span>caps lock</span></p></li>
+			<li><p class="key c65"><span>a</span></p></li>
+			<li><p class="key c83"><span>s</span></p></li>
+			<li><p class="key c68"><span>d</span></p></li>
+			<li><p class="key c70"><span>f</span></p></li>
+			<li><p class="key c71"><span>g</span></p></li>
+			<li><p class="key c72"><span>h</span></p></li>
+			<li><p class="key c74"><span>j</span></p></li>
+			<li><p class="key c75"><span>k</span></p></li>
+			<li><p class="key c76"><span>l</span></p></li>
+			<li><p class="key c186 alt"><b>:</b><span>;</span></p></li>
+			<li><p class="key c222 alt"><b>"</b><span>'</span></p></li>
+			<li><p class="key c13 alt enter"><span>return</span></p></li>
+		</ul>
+		<ul class="cf" id="zxcvb">
+			<li><p class="key c16 shiftleft"><span>Shift</span></p></li>
+			<li><p class="key c90"><span>z</span></p></li>
+			<li><p class="key c88"><span>x</span></p></li>
+			<li><p class="key c67"><span>c</span></p></li>
+			<li><p class="key c86"><span>v</span></p></li>
+			<li><p class="key c66"><span>b</span></p></li>
+			<li><p class="key c78"><span>n</span></p></li>
+			<li><p class="key c77"><span>m</span></p></li>
+			<li><p class="key c188 alt"><b>&lt;</b><span>,</span></p></li>
+			<li><p class="key c190 alt"><b>&gt;</b><span>.</span></p></li>
+			<li><p class="key c191 alt"><b>?</b><span>/</span></p></li>
+			<li><p class="key c16 shiftright"><span>Shift</span></p></li>
+		</ul>
 		<ul class="cf" id="bottomrow">
-	    	<li><a href="#" class="key" id="fn"><span>fn</span></a></li>
-	    	<li><a href="#" class="key c17" id="control"><span>control</span></a></li>
-	    	<li><a href="#" class="key option" id="optionleft"><span>option</span></a></li>
-	    	<li><a href="#" class="key command" id="commandleft"><span>command</span></a></li>
-	    	<li><a href="#" class="key c32" id="spacebar"></a></li>
-	    	<li><a href="#" class="key command" id="commandright"><span>command</span></a></li>
-	    	<li><a href="#" class="key option" id="optionright"><span>option</span></a></li>
-            <ol class="cf">
-            	<li><a href="#" class="key c37" id="left"><span></span></a></li>
-                <li>
-                	<a href="#" class="key c38" id="up"><span></span></a>
-                	<a href="#" class="key c40" id="down"><span></span></a>
-                </li>
-            	<li><a href="#" class="key c39" id="right"><span></span></a></li>
-            </ol>
-        </ul>
-    </div>
+			<li><p class="key" id="fn"><span>fn</span></p></li>
+			<li><p class="key c17" id="control"><span>control</span></p></li>
+			<li><p class="key option" id="optionleft"><span>option</span></p></li>
+			<li><p class="key command" id="commandleft"><span>command</span></p></li>
+			<li><p class="key c32" id="spacebar"></p></li>
+			<li><p class="key command" id="commandright"><span>command</span></p></li>
+			<li><p class="key option" id="optionright"><span>option</span></p></li>
+				<ol class="cf">
+					<li><p class="key c37" id="left"><span></span></p></li>
+						<li>
+							<p class="key c38" id="up"><span></span></a>
+							<p class="key c40" id="down"><span></span></a>
+						</li>
+					<li><p class="key c39" id="right"><span></span></p></li>
+				</ol>
+			</ul>
+	</div>
 
 <input type="text" id="text">
 <div id="output">keytest<div id=dum></div></div>

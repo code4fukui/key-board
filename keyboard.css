@@ -91,10 +91,10 @@ li {
 	font-size: 7.5pt;
 	text-transform: lowercase;
 }
-#numbers li a span {
+#numbers li p span {
 	display: block;
 }
-#numbers li a b {
+#numbers li p b {
 	margin: 3px 0 3px;
 	display: block;
 }
@@ -108,7 +108,7 @@ li {
 	font-size: 7.5pt;
 	text-transform: lowercase;
 }
-#qwerty li a span {
+#qwerty li p span {
 	display: block;
 	margin: 13px 0 0;
 	text-transform: uppercase;
@@ -125,7 +125,7 @@ li {
 #qwerty li .alt span {
 	margin: 2px 0 0;
 }
-#asdfg li a span {
+#asdfg li p span {
 	display: block;
 	margin: 13px 0 0;
 	text-transform: uppercase;
@@ -159,7 +159,7 @@ li {
 	margin: 27px 8px 0 0;
 	font-size: 7.5pt;
 }
-#zxcvb li a span {
+#zxcvb li p span {
 	display: block;
 	margin: 13px 0 0;
 	text-transform: uppercase;
