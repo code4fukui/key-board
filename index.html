@@ -5,10 +5,10 @@
 <h1>key-board tag test</h1>
 
 <main id="main">
-	<script type="module" src="./key-board.js"></script>
-	<key-board id=keyboard></key-board>
-	<input type="text" id="text">
-	<div id="output">keytest<div id=dum></div></div>
+  <script type="module" src="./key-board.js"></script>
+  <key-board id=keyboard></key-board>
+  <input type="text" id="text">
+  <div id="output">keytest<div id=dum></div></div>
 </main>
 
 <hr>
@@ -19,39 +19,39 @@ Design: <a href=http://cssdeck.com/item/120/apple-keyboard-via-css3>Apple Keyboa
 
 <script type="module">
 document.body.onkeydown = (e) => {
-	keyboard.pressKey(e.keyCode);
-	text.value += String.fromCharCode(e.keyCode);
+  keyboard.pressKey(e.keyCode);
+  text.value += String.fromCharCode(e.keyCode);
 };
 document.body.onkeyup = (e) => {
-	keyboard.releaseKey(e.keyCode);
+  keyboard.releaseKey(e.keyCode);
 };
 keyboard.onkeydown = (code) => {
-	text.value += String.fromCharCode(code);
+  text.value += String.fromCharCode(code);
 };
 </script>
 <style>
 body {
-	font-family: sans-serif;
-	text-align: center;
+  font-family: sans-serif;
+  text-align: center;
 }
 #main {
-	display: inline-block;
-	width: 100%;
-	padding-top: 20px;
+  display: inline-block;
+  width: 100%;
+  padding-top: 20px;
 }
 #output {
-	width: 100%;
-	text-align: center;
-	color: #aaa;
-	font-size: 80%;
-	margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  color: #aaa;
+  font-size: 80%;
+  margin-top: 10px;
 }
 #text {
-	margin-top: 20px;
-	width: 80%;
+  margin-top: 20px;
+  width: 80%;
 }
 a {
-	color: gray !important;
+  color: gray !important;
 }
 </style>
 
